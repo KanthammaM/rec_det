@@ -13,16 +13,11 @@ import { SummaryComponent } from "./summary/summary.component";
 import { RouterModule, Routes } from "@angular/router";
 
 
-const routes: Routes = [{ path: "", component: ReceiverDetailsComponent }];
+const routes: Routes = [{ path: "", component: ReceiverFormComponent }];
 
 @NgModule({
   declarations: [
-    ReceiverDetailsComponent,
-    HeaderComponent,
-    UserInfoComponent,
-    ProgressBarComponent,
-    ReceiverFormComponent,
-    SummaryComponent,
+    
   ],
   imports: [CommonModule, ReactiveFormsModule,  RouterModule.forChild(routes)], 
   exports: [],

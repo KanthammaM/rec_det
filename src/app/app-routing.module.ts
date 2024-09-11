@@ -4,6 +4,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { LoginPageComponent } from "../login/login.component";
+import { DashboardComponent } from "../dashboard/dashboard.component";
 
 export const routes: Routes = [
   // { path: "login", component: LoginPageComponent },
@@ -11,13 +12,17 @@ export const routes: Routes = [
   
     { path: 'login', component: LoginPageComponent },
   
-  {
-    path: "receiver-details",
-    loadChildren: () =>
-      import("../receiver-details/receiver-details.module").then(
-        (m) => m.ReceiverDetailsModule
-      ),
-  },
+    {
+      path: 'dashboard',
+      component: DashboardComponent,
+      children: [
+        {
+          path: 'receiver-details',
+          loadComponent: () => import('../receiver-details/receiver-form/receiver-form.component').then(m => m.ReceiverFormComponent)
+        },
+        { path: '', redirectTo: 'receiver-details', pathMatch: 'full' }
+      ]
+    },
   { path: "**", redirectTo: "/receiver-details" },
 ];
 

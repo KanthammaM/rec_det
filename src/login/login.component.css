@@ -78,3 +78,15 @@ button:disabled {
         max-width: 90%;
     }
 }
+/* .login-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+} */
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}

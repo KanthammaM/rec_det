@@ -7,7 +7,6 @@ import { ReceiverDetailsModule } from '../receiver-details/receiver-details.modu
 export const appConfig: ApplicationConfig = {
   providers:  [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
-    importProvidersFrom(ReceiverDetailsModule)
+    provideRouter(routes)
   ]
 };

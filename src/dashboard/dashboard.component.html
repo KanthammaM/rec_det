@@ -1,0 +1,9 @@
+<main class="dashboard-container">
+    <app-header></app-header>
+    <app-user-info></app-user-info>
+    <app-progress-bar [steps]="progressSteps" [currentStep]="currentStep"></app-progress-bar>
+    <section>
+        <router-outlet></router-outlet>
+
+    </section>
+</main>
